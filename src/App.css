@@ -22,3 +22,12 @@ span {
   justify-content: center;
   align-items: center;
 }
+
+.date {
+  background: var(--tg-theme-button-color);
+  color: var(--tg-theme-button-text-color); 
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
