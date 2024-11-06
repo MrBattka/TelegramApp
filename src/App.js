@@ -1,22 +1,24 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
+import { getForecast } from './api/api';
 
 const App = () => {
-
   const tg = window.Telegram.WebApp
 
+  const [weather, setWeather] = useState([])
+
+  const location = [{latitude: 44.5978387, longitude: 33.5549148}]
+
   useEffect(() => {
-    tg.ready()
+    getForecast(setWeather, location.latitude, location.longitude)
   }, [])
 
-  const onClose = () => {
-    tg.close()
-  }
+  console.log(weather);
+  
 
   return (
     <div className="App">
-      <h1>Hi</h1>
-      <button onClick={onClose}>Close App</button>
+      <h1>{weather}<span>℃</span></h1>
     </div>
   );
 }
