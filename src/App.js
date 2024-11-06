@@ -18,9 +18,12 @@ const App = () => {
   const month = date.getMonth() + 1;
   const year = date.getFullYear();
   
+  const onClose = () => {
+    tg.close()
+  }
 
   return (
-    <div className="App">
+    <div className="App" onClick={onClose}>
       <div className='date'>{`${day}.${month}.${year}`}</div>
       <h1>{weather}<span>℃</span></h1>
     </div>
