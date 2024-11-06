@@ -22,7 +22,7 @@ bot.on("message", async (msg) => {
   const text = msg.text;
   const chatId = msg.chat.id;
 if (text === '/start') {
-    
+      
 }
   
 });

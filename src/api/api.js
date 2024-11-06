@@ -65,29 +65,26 @@ export const getCurrentTemp = async (dispatch, latitude, longitude) => {
 };
 
 export const getForecast = async (dispatch, latitude, longitude) => {
-    try {
-      const response = instance.get(
-        `forecast?latitude=44.5978387&longitude=33.5549148&current=temperature_2m`
-      );
-      response.then((response) =>
-        dispatch(response.data.current.temperature_2m)
-      );
-    } catch (err) {
-      console.log(err);
-    
+  try {
+    const response = instance.get(
+      `forecast?latitude=44.5978387&longitude=33.5549148&current=temperature_2m`
+    );
+    response.then((response) => dispatch(response.data.current.temperature_2m));
+  } catch (err) {
+    console.log(err);
   }
 };
 
 export const getWeatherCode = async (dispatch, latitude, longitude) => {
-  if (typeof latitude === "number" && typeof longitude === "number") {
-    try {
-      const response = instance.get(
-        `forecast?latitude=${latitude}&longitude=${longitude}&daily=weathercode&timezone=Europe%2FMoscow&`
-      );
-      response.then((response) => dispatch(response.data.daily.weathercode));
-    } catch (err) {
-      console.log(err);
-    }
+  try {
+    const response = instance.get(
+      `forecast?latitude=44.5978387&longitude=33.5549148&current=weather_code`
+    );
+    response.then(
+      (response) => dispatch(response.data.current.weather_code)
+    );
+  } catch (err) {
+    console.log(err);
   }
 };
 
