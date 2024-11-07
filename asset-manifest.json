@@ -1,16 +1,21 @@
 {
   "files": {
-    "main.css": "/TelegramApp/static/css/main.2ae0c058.css",
-    "main.js": "/TelegramApp/static/js/main.cf91191f.js",
+    "main.css": "/TelegramApp/static/css/main.dbc0e9c1.css",
+    "main.js": "/TelegramApp/static/js/main.f9b03e72.js",
     "static/js/453.f8fb7327.chunk.js": "/TelegramApp/static/js/453.f8fb7327.chunk.js",
+    "static/media/rainGif.gif": "/TelegramApp/static/media/rainGif.938aa7bd1486c009f0c9.gif",
     "static/media/cloudyGif.gif": "/TelegramApp/static/media/cloudyGif.3d0a98ab9414392b21df.gif",
+    "static/media/sunnyGif.gif": "/TelegramApp/static/media/sunnyGif.c51fa762dcb792b79571.gif",
+    "static/media/thunderWithRain.gif": "/TelegramApp/static/media/thunderWithRain.bb02aca882d82a852969.gif",
+    "static/media/mistGif.gif": "/TelegramApp/static/media/mistGif.e598a656cb9c85477a54.gif",
+    "static/media/snowGif.gif": "/TelegramApp/static/media/snowGif.00fb74908c705c3a9336.gif",
     "index.html": "/TelegramApp/index.html",
-    "main.2ae0c058.css.map": "/TelegramApp/static/css/main.2ae0c058.css.map",
-    "main.cf91191f.js.map": "/TelegramApp/static/js/main.cf91191f.js.map",
+    "main.dbc0e9c1.css.map": "/TelegramApp/static/css/main.dbc0e9c1.css.map",
+    "main.f9b03e72.js.map": "/TelegramApp/static/js/main.f9b03e72.js.map",
     "453.f8fb7327.chunk.js.map": "/TelegramApp/static/js/453.f8fb7327.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ae0c058.css",
-    "static/js/main.cf91191f.js"
+    "static/css/main.dbc0e9c1.css",
+    "static/js/main.f9b03e72.js"
   ]
 }
