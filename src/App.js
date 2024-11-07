@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { getForecast, getWeatherCode } from "./api/api";
-import image from './assets/cloudyGif.gif'
+import image from './assets/thunderWithRain.gif'
+import { returnCurrBG } from "./common/weatherHelpers";
 
 const App = () => {
   const tg = window.Telegram.WebApp;
@@ -25,11 +26,12 @@ const App = () => {
     tg.close();
   };
 
-  const isCloudy = weatherCode === 1 ? <img src={image} className="bg" /> : null
+  const isCloudy = weatherCode === 2 ? <img src={image} className="bg" /> : null
 
+  
   return (
     <div className="App" onClick={onClose}>
-      {isCloudy}
+      {returnCurrBG(weatherCode)}
       <div className="date">{`${day}.${month}.${year}`}</div>
       <h1>
         {weather}
