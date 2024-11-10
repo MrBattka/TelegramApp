@@ -34,8 +34,14 @@ span {
   height: 100px;
 }
 
-.bg {
+.img_curr_weather {
   width: 200px;
   height: 200px;
   clip-path: circle(70px);
+}
+
+.bg {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
 }

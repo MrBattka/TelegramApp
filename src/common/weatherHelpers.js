@@ -1,10 +1,10 @@
 import "../App.css";
-import sunnyGif from "../assets/sunnyGif.gif"
+import sunnyGif from "../assets/sunnyGif.gif";
 import cloudyGif from "../assets/cloudyGif.gif";
-import mistGif from "../assets/mistGif.gif"
-import rainGif from "../assets/rainGif.gif"
-import thunderGif from "../assets/thunderWithRain.gif"
-import snowGif from "../assets/snowGif.gif"
+import mistGif from "../assets/mistGif.gif";
+import rainGif from "../assets/rainGif.gif";
+import thunderGif from "../assets/thunderWithRain.gif";
+import snowGif from "../assets/snowGif.gif";
 
 // export const isDayNow = (setIsDay, hour, sunrise, sunset) => {
 //   if (sunrise !== null && sunrise !== undefined) {
@@ -31,6 +31,14 @@ export const isCurrHour = (currHour, hour) => {
     return sliceHour == fullHour;
   } else {
     return sliceHour == currHour;
+  }
+};
+
+export const returnIsDay = (currHour, setIsDay) => {
+  if (currHour > 17 || currHour < 6) {
+    return setIsDay(false);
+  } else {
+    return setIsDay(true);
   }
 };
 
@@ -188,14 +196,12 @@ export const currDataForDay = (data, selectDay) => {
   }
 };
 
-const sunnyImg = <img className="bg" src={sunnyGif} />;
-const mistImg = <img className="bg" src={mistGif} />;
-const cloudyImg = <img className="bg" src={cloudyGif} />;
-const rainImg = <img className="bg" src={rainGif} />;
-const thunderyOutbreaksImg = (
-  <img className="bg" src={thunderGif} />
-);
-const snowImg = <img className="bg" src={snowGif} />;
+const sunnyImg = <img className="img_curr_weather" src={sunnyGif} />;
+const mistImg = <img className="img_curr_weather" src={mistGif} />;
+const cloudyImg = <img className="img_curr_weather" src={cloudyGif} />;
+const rainImg = <img className="img_curr_weather" src={rainGif} />;
+const thunderyOutbreaksImg = <img className="img_curr_weather" src={thunderGif} />;
+const snowImg = <img className="img_curr_weather" src={snowGif} />;
 
 export const returnCurrBG = (weatherCode) => {
   if (weatherCode === 0 || weatherCode === 1) {
@@ -230,6 +236,6 @@ export const returnCurrBG = (weatherCode) => {
     weatherCode === 85 ||
     weatherCode === 86
   ) {
-    return snowImg
+    return snowImg;
   }
 };
